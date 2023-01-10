@@ -1,2 +1,26 @@
-package models.components.order;public class CheapComputerComponent {
+package models.components.order;
+
+import models.components.Component;
+import models.components.ComponentCssSelector;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+@ComponentCssSelector(".product-essential")
+
+public class CheapComputerComponent extends ComputerEssentialSelectionsToBuyComponent{
+
+
+    public CheapComputerComponent(WebDriver driver, WebElement component) {
+        super(driver, component);
+    }
+
+    @Override
+    public String selectProcessorType(String type) {
+        return selectCompOption(type);
+    }
+
+    @Override
+    public String selectRAMType(String type) {
+        return selectCompOption(type);
+    }
 }

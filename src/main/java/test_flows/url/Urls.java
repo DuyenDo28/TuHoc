@@ -1,4 +1,4 @@
-package url;
+package test_flows.url;
 
 public interface Urls {
 
